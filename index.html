@@ -1,0 +1,67 @@
+<html>
+    <meta charset="UTF-8">
+    <h1>05-05 Práctica inicio de sesión</h1> <! 05-05 Práctica inicio de sesión>
+    <h3>----------------------------------------------------------------</h3>
+    <br>
+    <br>
+    <script>
+
+         function saltar1Linea() {
+            document.write("<br>");      
+            }  
+
+        function saltar2Linea() {
+            document.write("<br>");
+            document.write("<br>");         
+            }  
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        function sorteo(n) {
+            return Math.round(Math.random()*n);
+        }
+
+       
+
+        var inicioDeSesionRegistrado = "alura";
+        var contrasenhaRegistrada = "alura321";
+
+        var maximoIntentos = 3;
+        var intentoActual = 1;
+
+        while(intentoActual <= maximoIntentos){
+            var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+            var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+            if(inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada){
+                alert("Bienvenido al sistema -" + inicioDeSesionIngresado +"-");
+                intentoActual = maximoIntentos;
+                imprimir("<h2>C:/" + inicioDeSesionIngresado +"/></h2>");
+            } else {
+                if (intentoActual >= 3) {
+                    alert("Agotaste el número permitido de intentos!");
+                } else {
+                    alert("Inicio de sesión inválido. Favor intente de nuevo");
+                }
+            }
+
+           // vaya al próximo intento 
+            intentoActual = intentoActual +1  
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <h4>Práctica por Raúl Trueba Mejía - G4 2022 CDMX</h4>
+        <a href="https://www.linkedin.com/in/deepfx/"><img src="linkedin.png" alt="Contacto Raúl Trueba"></a>
+        <a><img src="one.png" alt="Contacto Raúl Trueba" width="36" height="36"></a>
+        <a><img src="logoalura.svg" alt="Contacto Raúl Trueba" width="32" height="32"></a>       
+    </div>
+</html>
